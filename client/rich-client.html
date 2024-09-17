@@ -48,7 +48,7 @@ const getJsonFetch = async (url, callback) => {
 const btnHello = document.querySelector("#btn-hello");
 const outputHello = document.querySelector("#output-hello");
 
-const helloJSONURL = "http://localhost:3000/helloJSON";
+const helloJSONURL = "/helloJSON";
 const helloCallback = json => {
   outputHello.innerHTML = json.message || "No <kbd>.message</kbd> value found!";
 };
@@ -58,7 +58,7 @@ btnHello.onclick = () => getJsonFetch(helloJSONURL, helloCallback);
 const btnTime = document.querySelector('#btn-time'); 
 const outputTime = document.querySelector('#output-time');
 
-const timeJSONURL = 'http://localhost:3000/timeJSON'; 
+const timeJSONURL = '/timeJSON'; 
 const timeCallback = json => {
     outputTime.innerHTML = json.time; 
 }
